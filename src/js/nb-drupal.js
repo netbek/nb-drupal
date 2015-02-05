@@ -12,9 +12,7 @@
 	angular
 		.module('nb.drupal', [])
 		.factory('Drupal', ['$window', function Drupal ($window) {
-				var Drupal = $window.Drupal;
-				delete $window.Drupal;
-				return Drupal;
+				return $window.Drupal;
 			}])
 		.run(runBlock);
 
