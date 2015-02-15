@@ -11,13 +11,7 @@
 
 	angular
 		.module('nb.drupal', [])
-		.factory('Drupal', ['$window', function Drupal ($window) {
+		.factory('Drupal', ['$window', function ($window) {
 				return $window.Drupal;
-			}])
-		.run(runBlock);
-
-	// Invoke at runtime to allow factory to delete global reference.
-	runBlock.$inject = ['Drupal'];
-	function runBlock (Drupal) {
-	}
+			}]);
 })(window, window.angular);
